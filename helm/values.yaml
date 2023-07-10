@@ -1,3 +1,6 @@
+global:
+  persistenceEnabled: true
+
 sql:
   primary:
     podSecurityContext:
@@ -5,7 +8,7 @@ sql:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: true
+      enabled: {{ .Values.global.persistenceEnabled }}
 
 redis:
   master:
@@ -14,7 +17,7 @@ redis:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: true
+      enabled: {{ .Values.global.persistenceEnabled }}
   replica:
     replicaCount: 1
     podSecurityContext:
@@ -22,7 +25,7 @@ redis:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: true
+      enabled: {{ .Values.global.persistenceEnabled }}
 
 rabbit:
   podSecurityContext:
@@ -30,4 +33,4 @@ rabbit:
   containerSecurityContext:
     enabled: false
   persistence:
-    enabled: true
+    enabled: {{ .Values.global.persistenceEnabled }}
