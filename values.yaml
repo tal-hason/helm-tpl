@@ -1,0 +1,17 @@
+sql:
+  podSecurityContext:
+    enabled: true
+  containerSecurityContext:
+    enabled: true
+
+redis:
+  podSecurityContext:
+    enabled: true
+  containerSecurityContext:
+    enabled: true
+
+rabbit:
+  podSecurityContext:
+    enabled: true
+  containerSecurityContext:
+    enabled: true
