@@ -4,8 +4,6 @@ sql:
       enabled: false
     containerSecurityContext:
       enabled: false
-    persistence:
-      enabled: false
 
 redis:
   master:
@@ -13,21 +11,15 @@ redis:
       enabled: false
     containerSecurityContext:
       enabled: false
-    persistence:
-      enabled: false
   replica:
     replicaCount: 1
     podSecurityContext:
       enabled: false
     containerSecurityContext:
       enabled: false
-    persistence:
-      enabled: false
 
 rabbit:
   podSecurityContext:
     enabled: false
   containerSecurityContext:
-    enabled: false
-  persistence:
     enabled: false
