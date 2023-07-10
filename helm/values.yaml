@@ -25,7 +25,7 @@ redis:
       enabled: true
 
 rabbit:
-  ingress: true
+  ingress: false
   podSecurityContext:
     enabled: false
   containerSecurityContext:
