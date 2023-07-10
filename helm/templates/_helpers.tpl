@@ -3,7 +3,11 @@ This helper function replaces the placeholder strings with the global value and 
 */}}
 {{- define "my-chart.replace" -}}
 {{- if eq . "REPLACEME" -}}
-{{- .Values.global.persistenceEnabled | toString | lower | quote -}}
+{{- if eq .Values.global.persistenceEnabled true -}}
+true
+{{- else -}}
+false
+{{- end -}}
 {{- else -}}
 {{- . | quote -}}
 {{- end -}}
