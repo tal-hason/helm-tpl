@@ -5,7 +5,7 @@ sql:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: {{ .Chart.annotations.disposable }}
+      enabled: false
 
 redis:
   master:
@@ -14,7 +14,7 @@ redis:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: {{ include .Chart.annotations.disposable }}
+      enabled: false
   replica:
     replicaCount: 1
     podSecurityContext:
@@ -22,7 +22,7 @@ redis:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: {{ include .Chart.annotations.disposable }}
+      enabled: false
 
 rabbit:
   podSecurityContext:
@@ -30,4 +30,4 @@ rabbit:
   containerSecurityContext:
     enabled: false
   persistence:
-    enabled: {{ include .Chart.annotations.disposable }}
+    enabled: false
