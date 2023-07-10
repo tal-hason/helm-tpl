@@ -1,0 +1,15 @@
+sql:
+    persistence:
+      enabled: false
+
+redis:
+  master:
+    persistence:
+      enabled: false
+  replica:
+    persistence:
+      enabled: false
+
+rabbit:
+  persistence:
+    enabled: false
