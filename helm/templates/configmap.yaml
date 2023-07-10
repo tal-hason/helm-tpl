@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: my-configmap
 data:
-  key: value
+  enabled: {{ include "my-chart.replace" .Values.enabled }}
