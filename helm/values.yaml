@@ -1,17 +1,17 @@
 sql:
   podSecurityContext:
-    enabled: true
+    enabled: false
   containerSecurityContext:
-    enabled: true
+    enabled: false
 
 redis:
   podSecurityContext:
-    enabled: true
+    enabled: false
   containerSecurityContext:
-    enabled: true
+    enabled: false
 
 rabbit:
   podSecurityContext:
-    enabled: true
+    enabled: false
   containerSecurityContext:
-    enabled: true
+    enabled: false
