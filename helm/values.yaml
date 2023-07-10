@@ -8,7 +8,7 @@ sql:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: "REPLACEME"
+      enabled: {{ .Values.global.persistenceEnabled }}
 
 redis:
   master:
@@ -17,7 +17,7 @@ redis:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: "REPLACEME"
+      enabled: {{ .Values.global.persistenceEnabled }}
   replica:
     replicaCount: 1
     podSecurityContext:
@@ -25,7 +25,7 @@ redis:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: "REPLACEME"
+      enabled: {{ .Values.global.persistenceEnabled }}
 
 rabbit:
   podSecurityContext:
@@ -33,4 +33,4 @@ rabbit:
   containerSecurityContext:
     enabled: false
   persistence:
-    enabled: "REPLACEME"
+    enabled: {{ .Values.global.persistenceEnabled }}
