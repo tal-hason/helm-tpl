@@ -1,6 +1,3 @@
-global:
-  persistenceEnabled: true
-
 sql:
   primary:
     podSecurityContext:
@@ -8,7 +5,7 @@ sql:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: {{ include "my-chart.replace" .Values.sql.primary.persistence.enabled }}
+      enabled: {{ .Chart.annotations.disposable }}
 
 redis:
   master:
@@ -17,7 +14,7 @@ redis:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: {{ include "my-chart.replace" .Values.redis.master.persistence.enabled }}
+      enabled: {{ .Chart.annotations.disposable }}
   replica:
     replicaCount: 1
     podSecurityContext:
@@ -25,7 +22,7 @@ redis:
     containerSecurityContext:
       enabled: false
     persistence:
-      enabled: {{ include "my-chart.replace" .Values.redis.replica.persistence.enabled }}
+      enabled: {{ .Chart.annotations.disposable }}
 
 rabbit:
   podSecurityContext:
@@ -33,4 +30,4 @@ rabbit:
   containerSecurityContext:
     enabled: false
   persistence:
-    enabled: {{ include "my-chart.replace" .Values.rabbit.persistence.enabled }}
+    enabled: {{ .Chart.annotations.disposable }}
