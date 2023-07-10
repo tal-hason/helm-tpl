@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: my-configmap
 data:
-  enabled: {{ eq .Values.global.deployemnt disposable }}
+  enabled: {{ eq .Values.global.deployemnt "disposable" }}
