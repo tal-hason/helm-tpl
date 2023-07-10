@@ -9,7 +9,11 @@ redis:
   master:
     podSecurityContext:
       enabled: false
+    containerSecurityContext:
+      enabled: false
   replica:
+    podSecurityContext:
+      enabled: false
     containerSecurityContext:
       enabled: false
 
