@@ -4,7 +4,7 @@ metadata:
   name: tpl-test-not-persistence
 spec:
   destination:
-    namespace: tpl-test
+    namespace: tpl-test-nopvc
     server: 'https://kubernetes.default.svc'
   project: default
   source:
