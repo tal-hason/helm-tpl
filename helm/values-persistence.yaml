@@ -1,6 +1,6 @@
 sql:
-    persistence:
-      enabled: false
+  persistence:
+    enabled: false
 
 redis:
   master:
